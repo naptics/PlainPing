@@ -40,6 +40,9 @@
                             <constraint firstItem="nzl-id-MJA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="iOZ-R6-JRl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pingResultLabel" destination="nzl-id-MJA" id="GxU-rd-Otg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

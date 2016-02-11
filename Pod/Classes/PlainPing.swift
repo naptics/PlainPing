@@ -8,48 +8,56 @@
 
 import Foundation
 
-public class PlainPing: NSObject, SimplePingDelegate {
+public class PlainPing: SimplePingAdapterDelegate {
     
-    private var pinger: SimplePing!
     private var pingStartTime: NSTimeInterval = 0
     private var timeOutTimer: NSTimer!
     
-    typealias CompletionBlock = (timeElapsedMs: Int?) -> ()
-    var completionBlock: CompletionBlock!
+    private var pingAdapter:SimplePingAdapter!
     
-    public func ping(hostName:String, completionBlock: (timeElapsedMs: Int?) -> ()) {
-//        let beYourself = PlainPing()
-        pinger = SimplePing(hostName: hostName)
-        pinger.delegate = self
-        pinger.start()
-        print("ping startet")
+    /// completion of a ping
+    public typealias PlainPingCompletion = (elapsedTimeMs: Double?, error:NSError?) -> ()
+    var completionBlock: PlainPingCompletion!
+    
+    // MARK: - main work
+    
+    /**
+        perform a single ping to a given `hostName`
+    
+        - parameter hostName: a hostname (www.apple.com) or an IP-Address
+        - parameter completionBlock: getting called after the ping request has finished or failed
+    */
+    public class func ping(hostName:String, completionBlock: PlainPingCompletion) {
+        let plainPing = PlainPing()
+        plainPing.pingAdapter = SimplePingAdapter()
+        plainPing.pingAdapter.delegate = plainPing
+        plainPing.completionBlock = completionBlock
+        
+        plainPing.pingAdapter.startPing(hostName)
     }
     
-    
-    // MARK: - Simple Ping Delegates
-    
-    public func simplePing(pinger: SimplePing!, didStartWithAddress address: NSData!) {
-        print("didStartWithAddress \(NSString.init(data: address, encoding: NSUTF8StringEncoding))")
-        pinger.sendPingWithData(nil)
+    private func finalizePing(latency:NSTimeInterval? = nil, error:NSError? = nil) {
+        
+        if let latency = latency {
+            let elapsedTimeMs = latency*1000
+            self.completionBlock?(elapsedTimeMs: elapsedTimeMs, error: error)
+        } else {
+            self.completionBlock?(elapsedTimeMs: nil, error: error)
+        }
     }
     
-    public func simplePing(pinger: SimplePing!, didSendPacket packet: NSData!) {
-        print("didSendPacket")
+    // MARK: - Simple Ping Adapter Delegate
+    
+    func didSendPing() {
+        pingStartTime = NSDate.timeIntervalSinceReferenceDate()
     }
     
-    public func simplePing(pinger: SimplePing!, didReceivePingResponsePacket packet: NSData!) {
-        print("didReceivePingResponsePacket")
+    func didReceivePong() {
+        let latency = NSDate.timeIntervalSinceReferenceDate() - pingStartTime
+        finalizePing(latency)
     }
     
-    public func simplePing(pinger: SimplePing!, didReceiveUnexpectedPacket packet: NSData!) {
-        print("didReceiveUnexpactedPacket")
-    }
-    
-    public func simplePing(pinger: SimplePing!, didFailToSendPacket packet: NSData!, error: NSError!) {
-        print("didFailToSendPacket")
-    }
-    
-    public func simplePing(pinger: SimplePing!, didFailWithError error: NSError!) {
-        print("didFailWithError")
+    func didFailPingWithError(error: NSError) {
+        finalizePing(error:error)
     }
 }

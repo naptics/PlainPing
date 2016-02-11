@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '46F825E6EE88EE5089DA4DF8'
+               BlueprintIdentifier = '5EB077794AAEC9567F937C8E'
                BlueprintName = 'PlainPing'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'PlainPing.framework'>

@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		05E08F3D730861DC15676CB531DAB0F4 /* Pods-PlainPing_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D615F4019BFC756E38987148550FD1 /* Pods-PlainPing_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17A7D66A304A9F411360646AAEC3CB30 /* PlainPing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1FA2E839F638390C0404AAB3AA9CB9DB /* PlainPing.bundle */; };
 		20E5473876B9648679E7097191D4EF93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		42DDCC7922C4982E9B824C5BFF411916 /* PlainPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744EBB336D255C454025E8FC9FAF0AD /* PlainPing.swift */; };
-		75C3D4BFF56AF66DE6D884B18B9885A2 /* PlainPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A5D8B337C39D4E300D6E27D21E7C3B /* PlainPing-dummy.m */; };
-		7EC97BCA0E8EA7D62744CB2AE405B0D3 /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8115A5755A2EEAEABA2D81873CC93C02 /* SimplePing.m */; };
+		2D136B65CDBC066130378525F32C32ED /* PlainPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE71E4DF4A5B3F3462C8D919981137 /* PlainPing.swift */; };
+		388F11B4E5D49A718AA8188A6C81A9C7 /* SimplePingAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6068D782A77D500A40BA9EECCA574ED9 /* SimplePingAdapter.swift */; };
+		3A6FDBDA1C17917939AB5B17E9B12621 /* PlainPing.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1FA2E839F638390C0404AAB3AA9CB9DB /* PlainPing.bundle */; };
+		654EB5029BF4A226E0A1F4A5DF0F4FDF /* PlainPing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48879913E536395460BA96396E9CA372 /* PlainPing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		800799C02E8DC1D9FAD4F599A90F958B /* PlainPing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A5D8B337C39D4E300D6E27D21E7C3B /* PlainPing-dummy.m */; };
 		837DACE59F9C57D5158F99C0E48A1034 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		8B39A2A16D2DD9AED7F6026C671EAC62 /* Pods-PlainPing_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4342ACC76776A7453EA4C1AE70142468 /* Pods-PlainPing_Tests-dummy.m */; };
 		91FE373187DCD93BB05C187D93D5DE11 /* Pods-PlainPing_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF8584C234F0295DDB84EC835AA5BE2 /* Pods-PlainPing_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACA32D65D00EE70EE739AB277A3F79B1 /* PlainPing-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48879913E536395460BA96396E9CA372 /* PlainPing-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6A7641282EDA1C4663577509C24D866 /* SimplePing.h in Headers */ = {isa = PBXBuildFile; fileRef = 702B45B0C87A73E0A7D5CCA5C0A60C37 /* SimplePing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC858BD1B97702684F12B91190B43BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		BFF1A8FDCB54F9DFB077DE329B076399 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		DEC33029D6729899DBA0FC7440F4ECEF /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6DDDE2D61107E78200FF905C4167DF /* SimplePing.m */; };
+		F991434249225D6A236BCBDE8BF20C44 /* SimplePing.h in Headers */ = {isa = PBXBuildFile; fileRef = 357A1950E3946DA509BE1BFE25D95E49 /* SimplePing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC046F99F56CBAA68F5A7CDF259062A7 /* Pods-PlainPing_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F06D263BA80B4F7C2EDCCD271FBF8EA /* Pods-PlainPing_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -27,21 +28,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BB78A428BA8BF80B9F18CD5B60D19D13;
+			remoteGlobalIDString = 2675A2F071B08D3800D758C713A8922E;
 			remoteInfo = PlainPing;
 		};
-		54649A101A09B7CD54A96ECF8CA1073F /* PBXContainerItemProxy */ = {
+		C54DE7377BB4B2E04FE6C7F5A7E73B2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0614829F22C4CC57A6E792CCD2CAA731;
+			remoteGlobalIDString = EE40FF921A57812872EB45F0E2B35949;
 			remoteInfo = "PlainPing-PlainPing";
 		};
 		FACEDBA2DAE037ED71E675D1C88A0B5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BB78A428BA8BF80B9F18CD5B60D19D13;
+			remoteGlobalIDString = 2675A2F071B08D3800D758C713A8922E;
 			remoteInfo = PlainPing;
 		};
 /* End PBXContainerItemProxy section */
@@ -55,23 +56,24 @@
 		2CF7C85F3A4CE22911ED550655DEF1F6 /* Pods_PlainPing_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlainPing_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFFC2871704D9E6A2B756F459F5126A /* Pods-PlainPing_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PlainPing_Tests.modulemap"; sourceTree = "<group>"; };
 		2D160D25977972D37713D21BC2AD8D18 /* Pods-PlainPing_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PlainPing_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		357A1950E3946DA509BE1BFE25D95E49 /* SimplePing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4342ACC76776A7453EA4C1AE70142468 /* Pods-PlainPing_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PlainPing_Tests-dummy.m"; sourceTree = "<group>"; };
 		48879913E536395460BA96396E9CA372 /* PlainPing-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlainPing-umbrella.h"; sourceTree = "<group>"; };
 		52D615F4019BFC756E38987148550FD1 /* Pods-PlainPing_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PlainPing_Tests-umbrella.h"; sourceTree = "<group>"; };
 		58CF71A37311A5670C630CAC2630F107 /* Pods-PlainPing_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PlainPing_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5BF4F53E824E46CA4008CB0792C00C0A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6068D782A77D500A40BA9EECCA574ED9 /* SimplePingAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SimplePingAdapter.swift; sourceTree = "<group>"; };
 		64E0B100265842309F59AB23998B7E6A /* Pods-PlainPing_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlainPing_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		69C5FAD6CD37C4DD15ACADC4C687AE31 /* Pods-PlainPing_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlainPing_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D9DC315F1925E3FBC63ECB13B12D1F0 /* Pods-PlainPing_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlainPing_Example.release.xcconfig"; sourceTree = "<group>"; };
-		702B45B0C87A73E0A7D5CCA5C0A60C37 /* SimplePing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		70CC57539296FC2C9C0139CD311E4B5C /* Pods-PlainPing_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlainPing_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		730E6C77F37CAA043B790E0271139194 /* Pods-PlainPing_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlainPing_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8115A5755A2EEAEABA2D81873CC93C02 /* SimplePing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		8D6DDDE2D61107E78200FF905C4167DF /* SimplePing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		8F981845C93C9211D1FF2D051EBD66C3 /* Pods_PlainPing_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlainPing_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9744EBB336D255C454025E8FC9FAF0AD /* PlainPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlainPing.swift; sourceTree = "<group>"; };
 		9B3AFF7BC7B231C95BBD77E37DE36473 /* PlainPing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlainPing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A5D8B337C39D4E300D6E27D21E7C3B /* PlainPing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlainPing-dummy.m"; sourceTree = "<group>"; };
+		B5AE71E4DF4A5B3F3462C8D919981137 /* PlainPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlainPing.swift; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BFDA8B2991494DB6A49C30697099DDDE /* PlainPing.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PlainPing.modulemap; sourceTree = "<group>"; };
 		C037722374C0A1E464495CFC0CB23AEB /* Pods-PlainPing_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PlainPing_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -85,10 +87,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		17B62791A0ADDA3FDE00F2DEF075747B /* Frameworks */ = {
+		2DD5C0B0AA29CBB29505A050808EB90A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F36244D4BD8EBAD61156DAB0D9B64E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF1A8FDCB54F9DFB077DE329B076399 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,14 +107,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20E5473876B9648679E7097191D4EF93 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7EC63B165548287D784D7FE5ADD8EB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DC858BD1B97702684F12B91190B43BDC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,14 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05ACDA6A44F99A840EEC09F8C6144EEF /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				6B045BAE3DCB64DDC438FD5024B1F176 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
 		0802A43F2942ED3328FD3D58A83EFC6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +130,14 @@
 				2CF7C85F3A4CE22911ED550655DEF1F6 /* Pods_PlainPing_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		14FF1DB6373FC59B2608BAABAB491B8B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				438501A58CD56D932BA7A91FC56EC072 /* Classes */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		16897861D03E8ECC875CF1942C1EC83F /* Targets Support Files */ = {
@@ -191,12 +193,13 @@
 			path = "Target Support Files/Pods-PlainPing_Tests";
 			sourceTree = "<group>";
 		};
-		6B045BAE3DCB64DDC438FD5024B1F176 /* Classes */ = {
+		438501A58CD56D932BA7A91FC56EC072 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9744EBB336D255C454025E8FC9FAF0AD /* PlainPing.swift */,
-				702B45B0C87A73E0A7D5CCA5C0A60C37 /* SimplePing.h */,
-				8115A5755A2EEAEABA2D81873CC93C02 /* SimplePing.m */,
+				B5AE71E4DF4A5B3F3462C8D919981137 /* PlainPing.swift */,
+				357A1950E3946DA509BE1BFE25D95E49 /* SimplePing.h */,
+				8D6DDDE2D61107E78200FF905C4167DF /* SimplePing.m */,
+				6068D782A77D500A40BA9EECCA574ED9 /* SimplePingAdapter.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -229,7 +232,7 @@
 		9A6DEF1CBF4D3C2DC26615CA12C04FAC /* PlainPing */ = {
 			isa = PBXGroup;
 			children = (
-				05ACDA6A44F99A840EEC09F8C6144EEF /* Pod */,
+				14FF1DB6373FC59B2608BAABAB491B8B /* Pod */,
 				9A44158C67C501EB4E80DC7CBD72FC03 /* Support Files */,
 			);
 			name = PlainPing;
@@ -255,12 +258,12 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2258625E58BE4392ABB5D5CEB68F008C /* Headers */ = {
+		C835549C5ADAD9245F00FBEB11F522A8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA32D65D00EE70EE739AB277A3F79B1 /* PlainPing-umbrella.h in Headers */,
-				B6A7641282EDA1C4663577509C24D866 /* SimplePing.h in Headers */,
+				654EB5029BF4A226E0A1F4A5DF0F4FDF /* PlainPing-umbrella.h in Headers */,
+				F991434249225D6A236BCBDE8BF20C44 /* SimplePing.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,22 +286,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0614829F22C4CC57A6E792CCD2CAA731 /* PlainPing-PlainPing */ = {
+		2675A2F071B08D3800D758C713A8922E /* PlainPing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9A75C7A9EEFF2AAF9AEA6DC538BD121F /* Build configuration list for PBXNativeTarget "PlainPing-PlainPing" */;
+			buildConfigurationList = 91983713507AC31CE9D84E96CFDEAD83 /* Build configuration list for PBXNativeTarget "PlainPing" */;
 			buildPhases = (
-				69493278323C1DE14FAF157A1B1B4BA5 /* Sources */,
-				17B62791A0ADDA3FDE00F2DEF075747B /* Frameworks */,
-				B9B0927C6BF6D1F84DEAA17AF83A0698 /* Resources */,
+				E45C9F0F3E069F1CEDFAA916DD2CC0D4 /* Sources */,
+				8F36244D4BD8EBAD61156DAB0D9B64E5 /* Frameworks */,
+				99E5A7E7CEA02F08DD793FB91021710D /* Resources */,
+				C835549C5ADAD9245F00FBEB11F522A8 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CBBDD214916C8552BEE5DFF0AB6E21E5 /* PBXTargetDependency */,
 			);
-			name = "PlainPing-PlainPing";
-			productName = "PlainPing-PlainPing";
-			productReference = 1FA2E839F638390C0404AAB3AA9CB9DB /* PlainPing.bundle */;
-			productType = "com.apple.product-type.bundle";
+			name = PlainPing;
+			productName = PlainPing;
+			productReference = 9B3AFF7BC7B231C95BBD77E37DE36473 /* PlainPing.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		A849A5C5E7880E066446EDCD15A5A654 /* Pods-PlainPing_Example */ = {
 			isa = PBXNativeTarget;
@@ -318,24 +323,22 @@
 			productReference = 8F981845C93C9211D1FF2D051EBD66C3 /* Pods_PlainPing_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BB78A428BA8BF80B9F18CD5B60D19D13 /* PlainPing */ = {
+		EE40FF921A57812872EB45F0E2B35949 /* PlainPing-PlainPing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6D3628B3A1BCEF5F3A494A12A58DC3B /* Build configuration list for PBXNativeTarget "PlainPing" */;
+			buildConfigurationList = C43C4C807D882E8289A97C300568F2C3 /* Build configuration list for PBXNativeTarget "PlainPing-PlainPing" */;
 			buildPhases = (
-				D579C04B2ADE123F68730D72E72C3291 /* Sources */,
-				F7EC63B165548287D784D7FE5ADD8EB0 /* Frameworks */,
-				F7CB928A90A4883F4561D683EB177A7C /* Resources */,
-				2258625E58BE4392ABB5D5CEB68F008C /* Headers */,
+				853BA4DB4040594A1949A2CF08DF6D68 /* Sources */,
+				2DD5C0B0AA29CBB29505A050808EB90A /* Frameworks */,
+				B69FC00D57AD21DCECB2FFBE081D4F19 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F554842E6F453C887E7BBC16F68B2A8E /* PBXTargetDependency */,
 			);
-			name = PlainPing;
-			productName = PlainPing;
-			productReference = 9B3AFF7BC7B231C95BBD77E37DE36473 /* PlainPing.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "PlainPing-PlainPing";
+			productName = "PlainPing-PlainPing";
+			productReference = 1FA2E839F638390C0404AAB3AA9CB9DB /* PlainPing.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		FB55135BA2C0C969F3C340A677BE64E2 /* Pods-PlainPing_Tests */ = {
 			isa = PBXNativeTarget;
@@ -376,8 +379,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB78A428BA8BF80B9F18CD5B60D19D13 /* PlainPing */,
-				0614829F22C4CC57A6E792CCD2CAA731 /* PlainPing-PlainPing */,
+				2675A2F071B08D3800D758C713A8922E /* PlainPing */,
+				EE40FF921A57812872EB45F0E2B35949 /* PlainPing-PlainPing */,
 				A849A5C5E7880E066446EDCD15A5A654 /* Pods-PlainPing_Example */,
 				FB55135BA2C0C969F3C340A677BE64E2 /* Pods-PlainPing_Tests */,
 			);
@@ -385,18 +388,18 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B9B0927C6BF6D1F84DEAA17AF83A0698 /* Resources */ = {
+		99E5A7E7CEA02F08DD793FB91021710D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6FDBDA1C17917939AB5B17E9B12621 /* PlainPing.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7CB928A90A4883F4561D683EB177A7C /* Resources */ = {
+		B69FC00D57AD21DCECB2FFBE081D4F19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A7D66A304A9F411360646AAEC3CB30 /* PlainPing.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,20 +414,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69493278323C1DE14FAF157A1B1B4BA5 /* Sources */ = {
+		853BA4DB4040594A1949A2CF08DF6D68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D579C04B2ADE123F68730D72E72C3291 /* Sources */ = {
+		E45C9F0F3E069F1CEDFAA916DD2CC0D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C3D4BFF56AF66DE6D884B18B9885A2 /* PlainPing-dummy.m in Sources */,
-				42DDCC7922C4982E9B824C5BFF411916 /* PlainPing.swift in Sources */,
-				7EC97BCA0E8EA7D62744CB2AE405B0D3 /* SimplePing.m in Sources */,
+				800799C02E8DC1D9FAD4F599A90F958B /* PlainPing-dummy.m in Sources */,
+				2D136B65CDBC066130378525F32C32ED /* PlainPing.swift in Sources */,
+				DEC33029D6729899DBA0FC7440F4ECEF /* SimplePing.m in Sources */,
+				388F11B4E5D49A718AA8188A6C81A9C7 /* SimplePingAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,27 +443,39 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CBBDD214916C8552BEE5DFF0AB6E21E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PlainPing-PlainPing";
+			target = EE40FF921A57812872EB45F0E2B35949 /* PlainPing-PlainPing */;
+			targetProxy = C54DE7377BB4B2E04FE6C7F5A7E73B2C /* PBXContainerItemProxy */;
+		};
 		F4667C68B77CB8B27DAC3CE9CC1F3376 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PlainPing;
-			target = BB78A428BA8BF80B9F18CD5B60D19D13 /* PlainPing */;
+			target = 2675A2F071B08D3800D758C713A8922E /* PlainPing */;
 			targetProxy = FACEDBA2DAE037ED71E675D1C88A0B5B /* PBXContainerItemProxy */;
-		};
-		F554842E6F453C887E7BBC16F68B2A8E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "PlainPing-PlainPing";
-			target = 0614829F22C4CC57A6E792CCD2CAA731 /* PlainPing-PlainPing */;
-			targetProxy = 54649A101A09B7CD54A96ECF8CA1073F /* PBXContainerItemProxy */;
 		};
 		FA547338401C4EC402C3AB79CF222354 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PlainPing;
-			target = BB78A428BA8BF80B9F18CD5B60D19D13 /* PlainPing */;
+			target = 2675A2F071B08D3800D758C713A8922E /* PlainPing */;
 			targetProxy = 0D4C883C07880BF5B9A878F40E4EBA9B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0DCFDBE4C37CD239FD01FAC1B246AD76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29CA210DE2F86CC1D7317F242378F941 /* PlainPing.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PlainPing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -491,6 +507,61 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		144AA115EFEED2BC6266B3DFD200118C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29CA210DE2F86CC1D7317F242378F941 /* PlainPing.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PlainPing/PlainPing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlainPing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlainPing/PlainPing.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PlainPing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		14847550B4150B71B2F48E26574F1C49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29CA210DE2F86CC1D7317F242378F941 /* PlainPing.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PlainPing/PlainPing-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlainPing/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlainPing/PlainPing.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PlainPing;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -555,7 +626,7 @@
 			};
 			name = Release;
 		};
-		3414771BD8DA778673F4D2EFD5165CC4 /* Debug */ = {
+		2C4F6E6751FE0DBA1FE12938E670239E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29CA210DE2F86CC1D7317F242378F941 /* PlainPing.xcconfig */;
 			buildSettings = {
@@ -565,7 +636,7 @@
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
 		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -637,45 +708,6 @@
 			};
 			name = Debug;
 		};
-		7AFF5134806744802C70D1098273F152 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29CA210DE2F86CC1D7317F242378F941 /* PlainPing.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PlainPing/PlainPing-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PlainPing/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PlainPing/PlainPing.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PlainPing;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8450D2AE2B91BE5AC70C69DDBD2B363F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29CA210DE2F86CC1D7317F242378F941 /* PlainPing.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = PlainPing;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		D9027D3C80AC37FA87160C2F2291F3B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D9DC315F1925E3FBC63ECB13B12D1F0 /* Pods-PlainPing_Example.release.xcconfig */;
@@ -706,34 +738,6 @@
 			};
 			name = Release;
 		};
-		E97EB4E5512C904E5603B5E2AE5443C0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29CA210DE2F86CC1D7317F242378F941 /* PlainPing.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PlainPing/PlainPing-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PlainPing/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PlainPing/PlainPing.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PlainPing;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -746,11 +750,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9A75C7A9EEFF2AAF9AEA6DC538BD121F /* Build configuration list for PBXNativeTarget "PlainPing-PlainPing" */ = {
+		91983713507AC31CE9D84E96CFDEAD83 /* Build configuration list for PBXNativeTarget "PlainPing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3414771BD8DA778673F4D2EFD5165CC4 /* Debug */,
-				8450D2AE2B91BE5AC70C69DDBD2B363F /* Release */,
+				144AA115EFEED2BC6266B3DFD200118C /* Debug */,
+				14847550B4150B71B2F48E26574F1C49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -764,20 +768,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		C43C4C807D882E8289A97C300568F2C3 /* Build configuration list for PBXNativeTarget "PlainPing-PlainPing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DCFDBE4C37CD239FD01FAC1B246AD76 /* Debug */,
+				2C4F6E6751FE0DBA1FE12938E670239E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CB0462243A4D1406C4A315C17E6BCF35 /* Build configuration list for PBXNativeTarget "Pods-PlainPing_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18B57F0D4BDC44B992F268D518D68E92 /* Debug */,
 				D9027D3C80AC37FA87160C2F2291F3B1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F6D3628B3A1BCEF5F3A494A12A58DC3B /* Build configuration list for PBXNativeTarget "PlainPing" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E97EB4E5512C904E5603B5E2AE5443C0 /* Debug */,
-				7AFF5134806744802C70D1098273F152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

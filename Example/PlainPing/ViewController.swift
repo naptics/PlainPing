@@ -10,25 +10,18 @@ import UIKit
 import PlainPing
 
 class ViewController: UIViewController {
-
-    var plainPing : PlainPing!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        plainPing = PlainPing()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    @IBOutlet weak var pingResultLabel: UILabel!
+    
 
     @IBAction func pingButtonPressed(sender: UIButton) {
-        plainPing.ping("192.168.1.11", completionBlock: { (timeElapsed:Int?) in
-            print("bla")
+        
+        PlainPing.ping("192.168.1.11", completionBlock: { (timeElapsed:Double?, error:NSError?) in
+            if let latency = timeElapsed {
+                self.pingResultLabel.text = "latency: \(latency)"
+            }
         })
+        
     }
 }
 
