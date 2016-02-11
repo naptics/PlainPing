@@ -11,7 +11,7 @@ import Foundation
 public class PlainPing: SimplePingAdapterDelegate {
     
     private var pingStartTime: NSTimeInterval = 0
-    private var timeOutTimer: NSTimer!
+    private var timeoutTimer: NSTimer!
     
     private var pingAdapter:SimplePingAdapter!
     
@@ -27,17 +27,16 @@ public class PlainPing: SimplePingAdapterDelegate {
         - parameter hostName: a hostname (www.apple.com) or an IP-Address
         - parameter completionBlock: getting called after the ping request has finished or failed
     */
-    public class func ping(hostName:String, completionBlock: PlainPingCompletion) {
+    public class func ping(hostName:String, withTimeout timeout:NSTimeInterval = 3, completionBlock: PlainPingCompletion) {
         let plainPing = PlainPing()
         plainPing.pingAdapter = SimplePingAdapter()
         plainPing.pingAdapter.delegate = plainPing
         plainPing.completionBlock = completionBlock
         
-        plainPing.pingAdapter.startPing(hostName)
+        plainPing.pingAdapter.startPing(hostName, timeout: timeout)
     }
     
     private func finalizePing(latency:NSTimeInterval? = nil, error:NSError? = nil) {
-        
         if let latency = latency {
             let elapsedTimeMs = latency*1000
             self.completionBlock?(elapsedTimeMs: elapsedTimeMs, error: error)

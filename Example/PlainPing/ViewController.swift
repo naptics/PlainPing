@@ -13,15 +13,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var pingResultLabel: UILabel!
     
-
+    
     @IBAction func pingButtonPressed(sender: UIButton) {
         
-        PlainPing.ping("192.168.1.11", completionBlock: { (timeElapsed:Double?, error:NSError?) in
+        PlainPing.ping("192.168.1.11", withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:NSError?) in
             if let latency = timeElapsed {
-                self.pingResultLabel.text = "latency: \(latency)"
+                self.pingResultLabel.text = "latency (ms): \(latency)"
+            }
+            
+            if let error = error {
+                print("error: \(error.localizedFailureReason)\(error.localizedDescription)")
             }
         })
-        
     }
 }
 
