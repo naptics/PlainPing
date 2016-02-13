@@ -1,9 +1,9 @@
 # PlainPing
 
-[![CI Status](http://img.shields.io/travis/Jonas Schoch/PlainPing.svg?style=flat)](https://travis-ci.org/Jonas Schoch/PlainPing)
-[![Version](https://img.shields.io/cocoapods/v/PlainPing.svg?style=flat)](http://cocoapods.org/pods/PlainPing)
-[![License](https://img.shields.io/cocoapods/l/PlainPing.svg?style=flat)](http://cocoapods.org/pods/PlainPing)
-[![Platform](https://img.shields.io/cocoapods/p/PlainPing.svg?style=flat)](http://cocoapods.org/pods/PlainPing)
+[![CI Status](http://img.shields.io/travis/naptics/PlainPing.svg?style=flat-square)](https://travis-ci.org/naptics/PlainPing)
+[![Version](https://img.shields.io/cocoapods/v/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
+[![License](https://img.shields.io/cocoapods/l/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
+[![Platform](https://img.shields.io/cocoapods/p/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
 
 A very plain ping interface to ping hostname or address, written in swift.
 
