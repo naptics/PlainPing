@@ -16,9 +16,9 @@ protocol SimplePingAdapterDelegate {
 
 class SimplePingAdapter: NSObject, SimplePingDelegate {
     
-    private var pinger:SimplePing!
     var delegate:SimplePingAdapterDelegate?
     
+    private var pinger:SimplePing!
     private var timeoutTimer:NSTimer?
     private var timeoutDuration:NSTimeInterval = 3
 
@@ -56,35 +56,29 @@ class SimplePingAdapter: NSObject, SimplePingDelegate {
     // MARK: - Simple Ping Delegates
     
     func simplePing(pinger: SimplePing!, didStartWithAddress address: NSData!) {
-        print("didStartWithAddress \(NSString.init(data: address, encoding: NSUTF8StringEncoding))")
         timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(timeoutDuration, target: self, selector: "timeout", userInfo: nil, repeats: false)
         pinger.sendPingWithData(nil)
     }
     
     func simplePing(pinger: SimplePing!, didSendPacket packet: NSData!) {
-        print("didSendPacket")
         delegate?.didSendPing()
     }
     
     func simplePing(pinger: SimplePing!, didReceivePingResponsePacket packet: NSData!) {
-        print("didReceivePingResponsePacket")
         delegate?.didReceivePong()
         stopPinging()
     }
     
     func simplePing(pinger: SimplePing!, didReceiveUnexpectedPacket packet: NSData!) {
-        print("didReceiveUnexpactedPacket")
         stopPinging()
     }
     
     func simplePing(pinger: SimplePing!, didFailToSendPacket packet: NSData!, error: NSError!) {
-        print("didFailToSendPacket")
         delegate?.didFailPingWithError(error)
         stopPinging()
     }
     
     func simplePing(pinger: SimplePing!, didFailWithError error: NSError!) {
-        print("didFailWithError")
         delegate?.didFailPingWithError(error)
         stopPinging()
     }

@@ -11,13 +11,11 @@ import Foundation
 public class PlainPing: SimplePingAdapterDelegate {
     
     private var pingStartTime: NSTimeInterval = 0
-    private var timeoutTimer: NSTimer!
-    
     private var pingAdapter:SimplePingAdapter!
     
     /// completion of a ping
     public typealias PlainPingCompletion = (elapsedTimeMs: Double?, error:NSError?) -> ()
-    var completionBlock: PlainPingCompletion!
+    private var completionBlock: PlainPingCompletion!
     
     // MARK: - main work
     
@@ -25,6 +23,7 @@ public class PlainPing: SimplePingAdapterDelegate {
         perform a single ping to a given `hostName`
     
         - parameter hostName: a hostname (www.apple.com) or an IP-Address
+        - parameter timeout: (optional, default 3) time in seconds to wait for an answer
         - parameter completionBlock: getting called after the ping request has finished or failed
     */
     public class func ping(hostName:String, withTimeout timeout:NSTimeInterval = 3, completionBlock: PlainPingCompletion) {
