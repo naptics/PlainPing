@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
 [![Platform](https://img.shields.io/cocoapods/p/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
 
-A very plain ping interface to ping hostname or address, written in swift.
+A very plain ping interface to ping hostname or address, written in swift. The module uses [SimplePing](https://developer.apple.com/library/mac/samplecode/SimplePing/Introduction/Intro.html).
 
 ## Usage
 
@@ -13,7 +13,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### PlainPing interface
 
-There is only one function in PlainPing, call `PlainPing.ping(hostname, completionBlock)`.
+There is only one class function in PlainPing, call `PlainPing.ping(hostname, completionBlock)`.
 
 Example:
 ```swift
@@ -23,13 +23,14 @@ PlainPing.ping("www.google.com", withTimeout: 1.0, completionBlock: { (timeElaps
     }
 
     if let error = error {
-        print("error: \(error.localizedFailureReason)\(error.localizedDescription)")
+        print("error: \(error.localizedFailureReason) \(error.localizedDescription)")
     }
 })
 ```
+Arguments:
 * `hostName`: use a name or an IP
 * `completionBlock`: it returns the elapsed time in ms and an error, if available
-* `withTimout`: (optional), say how long we wait for an answer in seconds, default 3s
+* `withTimeout`: (optional), say how long we wait for an answer in seconds, default 3s
 
 
 ## Requirements
