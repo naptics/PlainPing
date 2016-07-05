@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PlainPing"
-  s.version          = "0.2"
+  s.version          = "0.2.1"
   s.summary          = "a very plain ping interface in swift"
 
   # s.description      = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'PlainPing' => ['Pod/Assets/*.png']
-  }
+  #s.resource_bundles = {
+  #  'PlainPing' => ['Pod/Assets/*.png']
+  #}
 end
