@@ -56,7 +56,7 @@ class SimplePingAdapter: NSObject, SimplePingDelegate {
     // MARK: - Simple Ping Delegates
     
     func simplePing(pinger: SimplePing!, didStartWithAddress address: NSData!) {
-        timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(timeoutDuration, target: self, selector: #selector(SimplePingAdapter.timeout), userInfo: nil, repeats: false)
+        timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(timeoutDuration, target: self, selector: "timeout", userInfo: nil, repeats: false)
         pinger.sendPingWithData(nil)
     }
     
