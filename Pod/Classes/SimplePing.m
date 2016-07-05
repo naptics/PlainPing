@@ -540,8 +540,6 @@ static void HostResolveCallback(CFHostRef theHost, CFHostInfoType typeInfo, cons
     // It just redirects the call to the appropriate Objective-C method.
 {
     SimplePing *    obj;
-
-    NSLog(@">HostResolveCallback");
     
     obj = (__bridge SimplePing *) info;
     assert([obj isKindOfClass:[SimplePing class]]);
@@ -580,9 +578,7 @@ static void HostResolveCallback(CFHostRef theHost, CFHostInfoType typeInfo, cons
         
         CFHostScheduleWithRunLoop(self->_host, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
         
-        NSLog(@">CFHostStartInfoResolution");
         success = CFHostStartInfoResolution(self->_host, kCFHostAddresses, &streamError);
-        NSLog(@"<CFHostStartInfoResolution");
         if ( ! success ) {
             [self didFailWithHostStreamError:streamError];
         }
