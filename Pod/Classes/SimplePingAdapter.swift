@@ -11,7 +11,7 @@ import Foundation
 protocol SimplePingAdapterDelegate {
     func didSendPing()
     func didReceivePong()
-    func didFailPingWithError(_ error: NSError)
+    func didFailPingWithError(_ error: Error)
 }
 
 class SimplePingAdapter: NSObject, SimplePingDelegate {
@@ -73,12 +73,12 @@ class SimplePingAdapter: NSObject, SimplePingDelegate {
         stopPinging()
     }
     
-    func simplePing(_ pinger: SimplePing!, didFailToSendPacket packet: Data!, error: NSError!) {
+    func simplePing(_ pinger: SimplePing!, didFailToSendPacket packet: Data!, error: Error!) {
         delegate?.didFailPingWithError(error)
         stopPinging()
     }
     
-    func simplePing(_ pinger: SimplePing!, didFailWithError error: NSError!) {
+    func simplePing(_ pinger: SimplePing!, didFailWithError error: Error!) {
         delegate?.didFailPingWithError(error)
         stopPinging()
     }
