@@ -1,5 +1,7 @@
 language: objective-c
+
 osx_image: xcode8
+
 xcode_sdk: iphonesimulator10.0
 xcode_workspace: Example/PlainPing.xcworkspace
 xcode_scheme: PlainPing-Example
@@ -7,3 +9,4 @@ before_install:
     - pod install --project-directory=Example
 notifications:
   slack: naptics:0jvqNePbU1ycOfefKuHZ3A6o
+  email: false

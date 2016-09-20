@@ -1,12 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'PlainPing_Example', :exclusive => true do
+target 'PlainPing_Example' do
   pod 'PlainPing', :path => '../'
 end
 
-target 'PlainPing_Tests', :exclusive => true do
+target 'PlainPing_Tests' do
   pod 'PlainPing', :path => '../'
 
-  
+
 end
