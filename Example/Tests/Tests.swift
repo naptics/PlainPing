@@ -18,9 +18,9 @@ class Tests: XCTestCase {
         let url = "www.google.com"
         let timeout = 3.0
         
-        let readyExpectation = expectationWithDescription("ready")
+        let readyExpectation = expectation(description: "ready")
         
-        PlainPing.ping(url, withTimeout: timeout, completionBlock: { (timeElapsed:Double?, error:NSError?) in
+        PlainPing.ping(url, withTimeout: timeout, completionBlock: { (timeElapsed:Double?, error:Error?) in
             XCTAssertNotNil(timeElapsed)
             XCTAssertLessThanOrEqual(timeElapsed!/1000, timeout)
             XCTAssertNil(error)
@@ -29,7 +29,7 @@ class Tests: XCTestCase {
         })
         
         // Loop until the expectation is fulfilled
-        waitForExpectationsWithTimeout(5, handler: { error in
+        waitForExpectations(timeout: 5, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }
@@ -38,9 +38,9 @@ class Tests: XCTestCase {
         let url = "192.168.1.432"
         let timeout = 3.0
         
-        let readyExpectation = expectationWithDescription("ready")
+        let readyExpectation = expectation(description: "ready")
         
-        PlainPing.ping(url, withTimeout: timeout, completionBlock: { (timeElapsed:Double?, error:NSError?) in
+        PlainPing.ping(url, withTimeout: timeout, completionBlock: { (timeElapsed:Double?, error:Error?) in
             XCTAssertNil(timeElapsed)
             XCTAssertNotNil(error)
             
@@ -48,7 +48,7 @@ class Tests: XCTestCase {
         })
         
         // Loop until the expectation is fulfilled
-        waitForExpectationsWithTimeout(5, handler: { error in
+        waitForExpectations(timeout: 5, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }

@@ -5,39 +5,41 @@
 [![License](https://img.shields.io/cocoapods/l/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
 [![Platform](https://img.shields.io/cocoapods/p/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
 
-A very plain ping interface to ping hostname or address, written in swift. The module uses [SimplePing](https://developer.apple.com/library/mac/samplecode/SimplePing/Introduction/Intro.html).
+A very plain ping interface to ping hostname or address, written in swift 3.0. The module uses [SimplePing](https://developer.apple.com/library/mac/samplecode/SimplePing/Introduction/Intro.html).
+
+*To use the swift 2.2 version, select the PlainPing 0.2.2 tagged source or pod. *
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` in the Example directory first.
 
 ### PlainPing interface
 
-There is only one class function in PlainPing, call `PlainPing.ping(hostname, completionBlock)`.
+There is one class function in PlainPing, call `PlainPing.ping(hostname, completionBlock)`.
 
 Example:
 ```swift
-PlainPing.ping("www.google.com", withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:NSError?) in
+PlainPing.ping("www.google.com", withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
     if let latency = timeElapsed {
         self.pingResultLabel.text = "latency (ms): \(latency)"
     }
 
     if let error = error {
-        print("error: \(error.localizedFailureReason) \(error.localizedDescription)")
+        print("error: \(error.localizedDescription)")
     }
 })
 ```
 Arguments:
 * `hostName`: use a name or an IP
-* `completionBlock`: it returns the elapsed time in ms and an error, if available
-* `withTimeout`: (optional), say how long we wait for an answer in seconds, default 3s
+* `completionBlock`: will return the elapsed time in ms and an error, if there is one
+* `withTimeout`: (optional), define how long we wait for an answer in seconds, default 3s
 
 
 ## Requirements
 
 Minimum requirements unknown. Tested with the following:
-* xcode 7.2
-* CocoaPods 0.39.0 (only if you like)
+* xcode 8.0
+* CocoaPods 1.0
 
 ## Installation
 

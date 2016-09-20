@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class PlainPing: SimplePingAdapterDelegate {
+open class PlainPing: SimplePingAdapterDelegate {
     
-    private var pingStartTime: NSTimeInterval = 0
-    private var pingAdapter:SimplePingAdapter!
+    fileprivate var pingStartTime: TimeInterval = 0
+    fileprivate var pingAdapter:SimplePingAdapter!
     
     /// completion of a ping
-    public typealias PlainPingCompletion = (elapsedTimeMs: Double?, error:NSError?) -> ()
-    private var completionBlock: PlainPingCompletion!
+    public typealias PlainPingCompletion = (_ elapsedTimeMs: Double?, _ error:Error?) -> ()
+    fileprivate var completionBlock: PlainPingCompletion!
     
     // MARK: - main work
     
@@ -26,7 +26,7 @@ public class PlainPing: SimplePingAdapterDelegate {
         - parameter timeout: (optional, default 3) time in seconds to wait for an answer
         - parameter completionBlock: getting called after the ping request has finished or failed
     */
-    public class func ping(hostName:String, withTimeout timeout:NSTimeInterval = 3, completionBlock: PlainPingCompletion) {
+    open class func ping(_ hostName:String, withTimeout timeout:TimeInterval = 3, completionBlock: @escaping PlainPingCompletion) {
         let plainPing = PlainPing()
         plainPing.pingAdapter = SimplePingAdapter()
         plainPing.pingAdapter.delegate = plainPing
@@ -35,27 +35,27 @@ public class PlainPing: SimplePingAdapterDelegate {
         plainPing.pingAdapter.startPing(hostName, timeout: timeout)
     }
     
-    private func finalizePing(latency:NSTimeInterval? = nil, error:NSError? = nil) {
+    fileprivate func finalizePing(_ latency:TimeInterval? = nil, error:Error? = nil) {
         if let latency = latency {
             let elapsedTimeMs = latency*1000
-            self.completionBlock?(elapsedTimeMs: elapsedTimeMs, error: error)
+            self.completionBlock?(elapsedTimeMs, error)
         } else {
-            self.completionBlock?(elapsedTimeMs: nil, error: error)
+            self.completionBlock?(nil, error)
         }
     }
     
     // MARK: - Simple Ping Adapter Delegate
     
     func didSendPing() {
-        pingStartTime = NSDate.timeIntervalSinceReferenceDate()
+        pingStartTime = Date.timeIntervalSinceReferenceDate
     }
     
     func didReceivePong() {
-        let latency = NSDate.timeIntervalSinceReferenceDate() - pingStartTime
+        let latency = Date.timeIntervalSinceReferenceDate - pingStartTime
         finalizePing(latency)
     }
     
-    func didFailPingWithError(error: NSError) {
+    func didFailPingWithError(_ error: Error) {
         finalizePing(error:error)
     }
 }
