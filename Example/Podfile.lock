@@ -1,5 +1,5 @@
 PODS:
-  - PlainPing (0.2.2)
+  - PlainPing (0.3)
 
 DEPENDENCIES:
   - PlainPing (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PlainPing: f238df0e62ddbdf67afb95b6d6a793b4cbfd3124
+  PlainPing: 60d52435d567665b19c037f522de9696f1c0f45d
 
 PODFILE CHECKSUM: bd7bd87e5e9b23fcd1ee06e02a29635c05fa7ef6
 
