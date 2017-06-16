@@ -55,30 +55,30 @@ class SimplePingAdapter: NSObject, SimplePingDelegate {
     
     // MARK: - Simple Ping Delegates
     
-    func simplePing(_ pinger: SimplePing!, didStartWithAddress address: Data!) {
+    func simplePing(_ pinger: SimplePing, didStartWithAddress address: Data) {
         timeoutTimer = Timer.scheduledTimer(timeInterval: timeoutDuration, target: self, selector: #selector(SimplePingAdapter.timeout), userInfo: nil, repeats: false)
         pinger.send(with: nil)
     }
     
-    func simplePing(_ pinger: SimplePing!, didSendPacket packet: Data!) {
+    func simplePing(_ pinger: SimplePing, didSendPacket packet: Data, sequenceNumber: UInt16) {
         delegate?.didSendPing()
     }
     
-    func simplePing(_ pinger: SimplePing!, didReceivePingResponsePacket packet: Data!) {
+    func simplePing(_ pinger: SimplePing, didReceivePingResponsePacket packet: Data, sequenceNumber: UInt16) {
         delegate?.didReceivePong()
         stopPinging()
     }
     
-    func simplePing(_ pinger: SimplePing!, didReceiveUnexpectedPacket packet: Data!) {
+    func simplePing(_ pinger: SimplePing, didReceiveUnexpectedPacket packet: Data) {
         stopPinging()
     }
     
-    func simplePing(_ pinger: SimplePing!, didFailToSendPacket packet: Data!, error: Error!) {
+    func simplePing(_ pinger: SimplePing, didFailToSendPacket packet: Data, sequenceNumber: UInt16, error: Error) {
         delegate?.didFailPingWithError(error)
         stopPinging()
     }
     
-    func simplePing(_ pinger: SimplePing!, didFailWithError error: Error!) {
+    func simplePing(_ pinger: SimplePing, didFailWithError error: Error) {
         delegate?.didFailPingWithError(error)
         stopPinging()
     }
