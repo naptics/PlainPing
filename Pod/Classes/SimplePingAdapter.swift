@@ -41,8 +41,8 @@ class SimplePingAdapter: NSObject, SimplePingDelegate {
         }
     }
     
-    func timeout() {
-        let userInfo: [AnyHashable: Any] =
+    @objc func timeout() {
+        let userInfo: [String: Any] =
         [
             NSLocalizedDescriptionKey :  NSLocalizedString("ping timed out", value: "Hostname or address not reachable, or network is powered off", comment: ""),
             NSLocalizedFailureReasonErrorKey : NSLocalizedString("ping timed out", value: "Please check the hostname or the address", comment: "")
@@ -56,7 +56,7 @@ class SimplePingAdapter: NSObject, SimplePingDelegate {
     // MARK: - Simple Ping Delegates
     
     func simplePing(_ pinger: SimplePing, didStartWithAddress address: Data) {
-        timeoutTimer = Timer.scheduledTimer(timeInterval: timeoutDuration, target: self, selector: #selector(SimplePingAdapter.timeout), userInfo: nil, repeats: false)
+        timeoutTimer = Timer.scheduledTimer(timeInterval: timeoutDuration, target: self, selector: #selector(timeout), userInfo: nil, repeats: false)
         pinger.send(with: nil)
     }
     
