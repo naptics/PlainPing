@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PlainPing"
-  s.version          = "0.3.1"
+  s.version          = "0.4"
   s.summary          = "a very plain ping interface in swift"
 
   # s.description      = <<-DESC
