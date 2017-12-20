@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
 [![Platform](https://img.shields.io/cocoapods/p/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
 
-A very plain ping interface to ping hostname or address, written in swift 3.0. The module uses [SimplePing](https://developer.apple.com/library/mac/samplecode/SimplePing/Introduction/Intro.html).
+A very plain ping interface to ping hostname or address, with swift 4.0. The module uses [SimplePing](https://developer.apple.com/library/mac/samplecode/SimplePing/Introduction/Intro.html).
 
-*To use the swift 2.2 version, select the PlainPing 0.2.2 tagged source or pod. *
+*To use the swift 2.2 version, select the PlainPing 0.2.2 tagged source or pod.*
 
 ## Usage
 
@@ -16,8 +16,13 @@ To run the example project, clone the repo, and run `pod install` in the Example
 ### PlainPing interface
 
 There is one class function in PlainPing, call `PlainPing.ping(hostname, completionBlock)`.
+Arguments:
+* `hostName`: use a name or an IP
+* `completionBlock`: will return the elapsed time in ms and an error, if there is one
+* `withTimeout`: (optional), define how long we wait for an answer in seconds, default 3s
 
-Example:
+
+#### Example:
 ```swift
 PlainPing.ping("www.google.com", withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
     if let latency = timeElapsed {
@@ -29,16 +34,39 @@ PlainPing.ping("www.google.com", withTimeout: 1.0, completionBlock: { (timeElaps
     }
 })
 ```
-Arguments:
-* `hostName`: use a name or an IP
-* `completionBlock`: will return the elapsed time in ms and an error, if there is one
-* `withTimeout`: (optional), define how long we wait for an answer in seconds, default 3s
 
+#### Example 2:
+Ping several hosts one-by-one.
+```swift
+var pings:[String] = []
+
+@IBAction func pingButtonPressed(_ sender: UIButton) {
+    pings = ["www.google.com", "www.naptics.ch"]
+    pingNext()
+}
+
+func pingNext() {
+    guard pings.count > 0 else {
+        return
+    }
+
+    let ping = pings.removeFirst()
+    PlainPing.ping(ping, withTimeout: 1.0, completionBlock: { (timeElapsed:Double?, error:Error?) in
+        if let latency = timeElapsed {
+            print("\(ping) latency (ms): \(latency)")
+        }
+        if let error = error {
+            print("error: \(error.localizedDescription)")
+        }
+        self.pingNext()
+    })
+}
+```
 
 ## Requirements
 
 Minimum requirements unknown. Tested with the following:
-* xcode 8.0
+* xcode 9.0
 * CocoaPods 1.0
 
 ## Installation
