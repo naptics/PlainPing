@@ -13,4 +13,4 @@ notifications:
   slack: naptics:0jvqNePbU1ycOfefKuHZ3A6o
   email: false
 
-script: xcodebuild clean build test -workspace $TRAVIS_XCODE_WORKSPACE -scheme $TRAVIS_XCODE_SCHEME -sdk $TRAVIS_XCODE_SDK CODE_SIGNING_REQUIRED=NO
+script: xcodebuild clean build -workspace $TRAVIS_XCODE_WORKSPACE -scheme $TRAVIS_XCODE_SCHEME -sdk $TRAVIS_XCODE_SDK CODE_SIGNING_REQUIRED=NO
