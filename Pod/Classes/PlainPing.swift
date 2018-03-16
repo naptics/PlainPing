@@ -42,6 +42,8 @@ open class PlainPing: SimplePingAdapterDelegate {
         } else {
             self.completionBlock?(nil, error)
         }
+        pingAdapter.delegate = nil
+        pingAdapter = nil
     }
     
     // MARK: - Simple Ping Adapter Delegate
