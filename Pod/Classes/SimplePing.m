@@ -526,9 +526,12 @@ static uint16_t in_cksum(const void *buffer, size_t bufferLen) {
                 [strongDelegate simplePing:self didReceivePingResponsePacket:packet sequenceNumber:sequenceNumber];
             }
         } else {
-            if ( (strongDelegate != nil) && [strongDelegate respondsToSelector:@selector(simplePing:didReceiveUnexpectedPacket:)] ) {
-                [strongDelegate simplePing:self didReceiveUnexpectedPacket:packet];
-            }
+
+// NOTE: Patching the pod source. This call doesn't return a delegate call (SimplePingAdapter.swift didReceiveUnexpectedPacket) and it's caller doesn't release objects due to the missing delegate call.  We're commenting this out to just allow this case to fallback on the timeoutTimer functionality and it cleans up properly. It's causing a memory leak.
+            
+//            if ( (strongDelegate != nil) && [strongDelegate respondsToSelector:@selector(simplePing:didReceiveUnexpectedPacket:)] ) {
+//                [strongDelegate simplePing:self didReceiveUnexpectedPacket:packet];
+//            }
         }
     } else {
     
