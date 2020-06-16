@@ -627,7 +627,17 @@ static void SocketReadCallback(CFSocketRef s, CFSocketCallBackType type, CFDataR
         
         // The socket will now take care of cleaning up our file descriptor.
         
-        assert( CFSocketGetSocketFlags(self.socket) & kCFSocketCloseOnInvalidate );
+        CFSocketSetSocketFlags(self.socket, kCFSocketCloseOnInvalidate);
+               
+        if (!CFSocketGetSocketFlags(self.socket)) {
+           [self didFailWithError:[NSError errorWithDomain:NSPOSIXErrorDomain code:err userInfo:@{NSLocalizedDescriptionKey:@"Invalid socket flags"}]];
+           return;
+        }
+        else if (!kCFSocketCloseOnInvalidate) {
+           [self didFailWithError:[NSError errorWithDomain:NSPOSIXErrorDomain code:err userInfo:@{NSLocalizedDescriptionKey:@"Invalid socket close"}]];
+           return;
+        }
+               
         fd = -1;
         
         rls = CFSocketCreateRunLoopSource(NULL, self.socket, 0);
