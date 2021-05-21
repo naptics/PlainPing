@@ -1,5 +1,11 @@
 # PlainPing
 
+## Project in Community Mode Only
+
+The project is not maintained anymore. But if you've implemented new features, fixed bugs or resolved issues, we're happy to merge your PR.
+
+We don't use PlainPing in our projects and therefore cannot invest much time into it right now. Our plan is to have PlainPing running as long as it is used by the community. If we see rising interest, we will come back to maintain it.
+
 [![CI Status](http://img.shields.io/travis/naptics/PlainPing.svg?style=flat-square)](https://travis-ci.org/naptics/PlainPing)
 [![Version](https://img.shields.io/cocoapods/v/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
 [![License](https://img.shields.io/cocoapods/l/PlainPing.svg?style=flat-square)](http://cocoapods.org/pods/PlainPing)
