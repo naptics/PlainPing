@@ -17,6 +17,8 @@ Pod::Spec.new do |s|
 
   s.platforms    = { :ios => "8.0", :osx => "10.11" }
   s.requires_arc = true
+  
+  s.xcconfig = { 'SWIFT_INSTALL_OBJC_HEADER' => 'NO' }
 
   s.source_files = 'Pod/Classes/**/*'
   #s.resource_bundles = {
