@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SimplePingAdapterDelegate {
+protocol SimplePingAdapterDelegate: class {
     func didSendPing()
     func didReceivePong()
     func didFailPingWithError(_ error: Error)
@@ -16,7 +16,7 @@ protocol SimplePingAdapterDelegate {
 
 class SimplePingAdapter: NSObject, SimplePingDelegate {
     
-    var delegate:SimplePingAdapterDelegate?
+    weak var delegate: SimplePingAdapterDelegate?
     
     fileprivate var pinger:SimplePing!
     fileprivate var timeoutTimer:Timer?
