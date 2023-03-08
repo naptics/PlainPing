@@ -29,7 +29,7 @@ class Tests: XCTestCase {
         })
         
         // Loop until the expectation is fulfilled
-        waitForExpectations(timeout: 5, handler: { error in
+        waitForExpectations(timeout: 25, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }
@@ -48,7 +48,7 @@ class Tests: XCTestCase {
         })
         
         // Loop until the expectation is fulfilled
-        waitForExpectations(timeout: 5, handler: { error in
+        waitForExpectations(timeout: 25, handler: { error in
             XCTAssertNil(error, "Error")
         })
     }

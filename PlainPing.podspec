@@ -20,7 +20,8 @@ Pod::Spec.new do |s|
   
   s.xcconfig = { 'SWIFT_INSTALL_OBJC_HEADER' => 'NO' }
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Sources/PlainPing/*', 'Sources/SimplePing/include/*', 'Sources/SimplePing/*'
+
   #s.resource_bundles = {
   #  'PlainPing' => ['Pod/Assets/*.png']
   #}
