@@ -7,9 +7,8 @@ let package = Package(
     name: "PlainPing",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "PlainPing",
-            targets: ["PlainPing"]),
+        .library(name: "PlainPing", targets: ["PlainPing"]),
+        .library(name: "SimplePing", targets: ["SimplePing"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,7 +23,7 @@ let package = Package(
         .target(
             name: "SimplePing"),
         .testTarget(
-            name: "PlainPingTests",
-            dependencies: ["PlainPing"]),
+            name: "PingTests",
+            dependencies: ["PlainPing", "SimplePing"]),
     ]
 )
