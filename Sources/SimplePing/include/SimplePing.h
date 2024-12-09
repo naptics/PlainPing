@@ -9,6 +9,7 @@
 @import Foundation;
 
 #include <AssertMacros.h>           // for __Check_Compile_Time
+#include <sys/socket.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
